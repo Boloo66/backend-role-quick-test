@@ -2,7 +2,8 @@
 
 A robust wallet service built with NestJS that provides APIs for creating wallets, funding them, transferring funds between wallets, and fetching wallet details with transaction history.
 
-#Postman Docs
+## Postman Docs
+
 [Postman Doc](https://documenter.getpostman.com/view/24014153/2sB3dTuogk#e73817d0-5885-4b54-a6b2-dffd5c59336e)
 
 ## Features
@@ -15,6 +16,7 @@ A robust wallet service built with NestJS that provides APIs for creating wallet
 - Comprehensive error handling and validation
 - Clean architecture with repository pattern
 - Unit tests included
+- Husky for pre-commit and pre-push
 - In-memory storage implementation
 
 ## Tech Stack
