@@ -4,15 +4,15 @@ A robust wallet service built with NestJS that provides APIs for creating wallet
 
 ## Features
 
-Create wallets with USD currency
-Fund wallets with validation
-Transfer funds between wallets with balance checks
-Fetch wallet details with complete transaction history
-Idempotency support for fund and transfer operations
-Comprehensive error handling and validation
-Clean architecture with repository pattern
-Unit tests included
-In-memory storage implementation
+- Create wallets with USD currency
+- Fund wallets with validation
+- Transfer funds between wallets with balance checks
+- Fetch wallet details with complete transaction history
+- Idempotency support for fund and transfer operations
+- Comprehensive error handling and validation
+- Clean architecture with repository pattern
+- Unit tests included
+- In-memory storage implementation
 
 ## Tech Stack
 
@@ -35,7 +35,6 @@ In-memory storage implementation
 
 ```bash
 git clone <repository-url>
-cd wallet-service
 ```
 
 2. Install dependencies:
@@ -48,11 +47,11 @@ npm install
 
 ```bash
 # Development mode
+cp .env.example .env
 npm run start:dev
 
 # Production mode
-npm run build
-npm run start:prod
+npm run build && start:prod
 ```
 
 The server will start on `http://localhost:3000`
@@ -63,11 +62,6 @@ The server will start on `http://localhost:3000`
 # Unit tests
 npm run test
 
-# Test coverage
-npm run test:cov
-
-# Watch mode
-npm run test:watch
 ```
 
 ## API Endpoints
@@ -257,54 +251,18 @@ The service implements comprehensive error handling:
    - Add wallet_id + reference unique constraint for idempotency
 
 2. **Caching**
-   - Redis for frequently accessed wallet data
+   - Redis for frequently accessed wallet data for query
    - Cache invalidation on updates
 
-3. **Distributed Systems**
-   - Use distributed locks (Redis/DynamoDB) for concurrent transfers
-   - Implement event sourcing for audit trail
-   - Consider SAGA pattern for complex transactions
+3. **Monitoring & Observability**
+   - Alerting for failed transactions on slack
 
-4. **Performance**
-   - Database connection pooling
-   - Horizontal scaling with load balancer
-   - Read replicas for wallet queries
-   - Background jobs for transaction processing
-
-5. **Monitoring & Observability**
-   - Centralized logging (ELK stack)
-   - Metrics (Prometheus/Grafana)
-   - Distributed tracing (Jaeger)
-   - Alerting for failed transactions
-
-6. **Security**
+4. **Security**
    - Authentication/Authorization (JWT)
    - Rate limiting
    - Encryption at rest and in transit
    - Audit logs
 
-7. **High Availability**
+5. **High Availability**
    - Multi-region deployment
    - Database replication
-   - Circuit breakers
-   - Graceful degradation
-
-## Testing
-
-The service includes comprehensive unit tests covering:
-
-- ✅ Wallet creation
-- ✅ Funding operations
-- ✅ Transfer operations
-- ✅ Error scenarios (insufficient balance, invalid wallets)
-- ✅ Transaction history retrieval
-
-Run tests with:
-
-```bash
-npm run test
-```
-
-## License
-
-MIT
