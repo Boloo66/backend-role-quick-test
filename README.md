@@ -267,6 +267,7 @@ The service implements comprehensive error handling:
    - Rate limiting
    - Encryption at rest and in transit
    - Audit logs
+   - Having limits to for MAX_TRANSFER_AMOUNT=1000000 and MIN_TRANSFER_AMOUNT=10 helps regulate how much the user can transact.
 
 5. **High Availability**
    - Multi-region deployment
@@ -275,3 +276,6 @@ The service implements comprehensive error handling:
 6. **Lighter Response**
    - Remove transactions array from the wallet query
    - Make a separate query for fetching transactions for user wallets (arrays makes increases response time and latency for getting just **Wallet details**)
+
+7. **Handling Currency**
+   - it's best to handle currency in the base units. i.e kobo and cents etc
