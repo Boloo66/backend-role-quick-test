@@ -4,15 +4,15 @@ A robust wallet service built with NestJS that provides APIs for creating wallet
 
 ## Features
 
-✅ Create wallets with USD currency
-✅ Fund wallets with validation
-✅ Transfer funds between wallets with balance checks
-✅ Fetch wallet details with complete transaction history
-✅ Idempotency support for fund and transfer operations
-✅ Comprehensive error handling and validation
-✅ Clean architecture with repository pattern
-✅ Unit tests included
-✅ In-memory storage implementation
+Create wallets with USD currency
+Fund wallets with validation
+Transfer funds between wallets with balance checks
+Fetch wallet details with complete transaction history
+Idempotency support for fund and transfer operations
+Comprehensive error handling and validation
+Clean architecture with repository pattern
+Unit tests included
+In-memory storage implementation
 
 ## Tech Stack
 
@@ -22,33 +22,12 @@ A robust wallet service built with NestJS that provides APIs for creating wallet
 - **Testing**: Jest
 - **Storage**: In-memory (Map-based repositories)
 
-## Project Structure
-
-```
-wallet-service/
-├── src/
-│   ├── wallet/
-│   │   ├── dto/                    # Data Transfer Objects
-│   │   ├── entities/               # Domain entities
-│   │   ├── interfaces/             # Repository interfaces
-│   │   ├── repository/             # In-memory repositories
-│   │   ├── wallet.service.ts       # Business logic
-│   │   ├── wallet.controller.ts    # HTTP endpoints
-│   │   └── wallet.module.ts        # Module definition
-│   ├── common/
-│   │   ├── exceptions/             # Custom exceptions
-│   │   └── filters/                # Exception filters
-│   ├── app.module.ts
-│   └── main.ts
-└── test/
-```
-
 ## Setup Instructions
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
-- npm or yarn
+- Node.js (v20 or higher)
+- pnpm
 
 ### Installation
 
