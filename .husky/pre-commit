@@ -1,0 +1,8 @@
+echo "Running pre-commit checks..."
+echo "Linting..."
+npm run lint || exit 1
+
+echo "Running unit tests..."
+npm run test || exit 1
+
+echo "Pre-commit checks passed!"
