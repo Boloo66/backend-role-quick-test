@@ -271,3 +271,7 @@ The service implements comprehensive error handling:
 5. **High Availability**
    - Multi-region deployment
    - Database replication
+
+6. **Lighter Response**
+   - Remove transactions array from the wallet query
+   - Make a separate query for fetching transactions for user wallets (arrays makes increases response time and latency for getting just **Wallet details**)
